@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Coco-Cola Website</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <section>
+            <div class = "circle"></div>
+            <header>
+                <a href ="#"><img src="E:\bootstrap-website\images\images\logo.png" class = "logo"></a>
+                <div class = "toggle" onclick="toggleMenu()"></div>
+                <ul class = "navigation">
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>Menu</a></li>
+                    <li><a href='#'>What's New</a></li>
+                    <li><a href='#'>Contact</a></li>
+                </ul>
+            </header>
+            <div class = "content">
+                <div class="textBox">
+                    <h2>Taste The Feeling</h2>
+                    <p>The Coca-Cola Company is the world's number one maker of soft drinks, selling 1.3 billion beverage servings every day. Coca-Cola's red and white trademark is probably the best-known brand symbol in the world. Headquartered since its founding in Atlanta, Coca-Cola makes four of the top five soft drinks in the world, Coca-Cola at number one and Diet Coke, Fanta, and Sprite at numbers three through five. </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class = "imgBox">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola1.png"></div>
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola2.png"></div>
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola3.png"></div>
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola4.png"></div>
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola5.png"></div>
+                          <div class="swiper-slide"><img src = "E:\bootstrap-website\images\images\cocacola6.png"></div>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <ul class = "sci">
+                <li><a href="#"><img src ="E:\bootstrap-website\images\images\facebook.png"></a></li>
+                <li><a href="#"><img src ="E:\bootstrap-website\images\images\instagram.png"></a></li>
+                <li><a href="#"><img src ="E:\bootstrap-website\images\images\twitter.png"></a></li>
+
+            </ul>
+        </section>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+              effect: 'coverflow',
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: 'auto',
+              coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows : true,
+              },
+              autoplay: {
+                delay:2500,
+                disableOnInteraction:false,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              loop : true,
+            });
+            
+            function toggleMenu(){
+                const menuToggle = document.querySelector('.toggle');
+                const navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
